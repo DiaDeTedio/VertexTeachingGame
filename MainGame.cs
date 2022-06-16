@@ -34,6 +34,8 @@ namespace VertexTeachingGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             CreateMesh();
+
+            _renderer.Setup();
         }
 
         protected override void Update(GameTime gameTime)
