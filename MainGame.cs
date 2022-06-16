@@ -31,6 +31,8 @@ namespace VertexTeachingGame
         Mesh mesh;
         protected override void LoadContent()
         {
+            _graphics.GraphicsProfile = GraphicsProfile.Reach;
+
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             CreateMesh();
