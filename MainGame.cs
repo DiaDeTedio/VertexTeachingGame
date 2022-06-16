@@ -56,7 +56,7 @@ namespace VertexTeachingGame
                 },
                 new[]
                 {
-                    new Triangle(0, 1, 2),
+                    0, 1, 2
                 }
             );
             mesh.GenerateMeshData();
