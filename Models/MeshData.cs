@@ -14,7 +14,7 @@ public class MeshData
         if (VertexBuffer is null || VertexBuffer.VertexCount != vertexCount)
             VertexBuffer = new VertexBuffer(_graphicsDevice, VertexPositionColor.VertexDeclaration, vertexCount, BufferUsage.WriteOnly);
         if (IndexBuffer is null || IndexBuffer.IndexCount != indexCount)
-            IndexBuffer = new IndexBuffer(_graphicsDevice, IndexElementSize.ThirtyTwoBits, indexCount, BufferUsage.WriteOnly);
+            IndexBuffer = new IndexBuffer(_graphicsDevice, IndexElementSize.SixteenBits, indexCount, BufferUsage.WriteOnly);
     }
 
     public void Update(VertexPositionColor[] vertices, Triangle[] triangles)

@@ -2,11 +2,11 @@ namespace VertexTeachingGame.Rendering.Models;
 
 public readonly struct Triangle
 {
-    public readonly int A;
-    public readonly int B;
-    public readonly int C;
+    public readonly short A;
+    public readonly short B;
+    public readonly short C;
 
-    public Triangle(int a, int b, int c)
+    public Triangle(short a, short b, short c)
     {
         A = a;
         B = b;
