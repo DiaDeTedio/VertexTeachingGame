@@ -12,12 +12,12 @@ public class MeshData
     void CreateIfNeeded(int vertexCount, int indexCount)
     {
         if (VertexBuffer is null || VertexBuffer.VertexCount != vertexCount)
-            VertexBuffer = new VertexBuffer(_graphicsDevice, VertexPosition.VertexDeclaration, vertexCount, BufferUsage.WriteOnly);
+            VertexBuffer = new VertexBuffer(_graphicsDevice, VertexPositionColor.VertexDeclaration, vertexCount, BufferUsage.WriteOnly);
         if (IndexBuffer is null || IndexBuffer.IndexCount != indexCount)
             IndexBuffer = new IndexBuffer(_graphicsDevice, IndexElementSize.ThirtyTwoBits, indexCount, BufferUsage.WriteOnly);
     }
 
-    public void Update(VertexPosition[] vertices, Triangle[] triangles)
+    public void Update(VertexPositionColor[] vertices, Triangle[] triangles)
     {
         CreateIfNeeded(vertices.Length, triangles.Length * 3);
         VertexBuffer.SetData(vertices);

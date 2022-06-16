@@ -50,9 +50,9 @@ namespace VertexTeachingGame
         {
             mesh = new Mesh(_graphics.GraphicsDevice, new[]
                 {
-                    new VertexPosition(new Vector3(-1, -1, 0)),
-                    new VertexPosition(new Vector3(1, -1, 0)),
-                    new VertexPosition(new Vector3(0, 1, 0)),
+                    new VertexPositionColor(new Vector3(-1, -1, 0), Color.White),
+                    new VertexPositionColor(new Vector3(1, -1, 0), Color.White),
+                    new VertexPositionColor(new Vector3(0, 1, 0), Color.White),
                 },
                 new[]
                 {
