@@ -1,0 +1,11 @@
+System.ArgumentOutOfRangeException: Vertex stride can not be larger than the vertex buffer size. (Parameter 'vertexStride')
+   at Microsoft.Xna.Framework.Graphics.VertexBuffer.SetDataInternal[T](Int32 offsetInBytes, T[] data, Int32 startIndex, Int32 elementCount, Int32 vertexStride, SetDataOptions options)
+   at Microsoft.Xna.Framework.Graphics.VertexBuffer.SetData[T](T[] data)
+   at VertexTeachingGame.Rendering.Models.MeshData.Update(VertexPosition[] vertices, Triangle[] triangles) in C:\Users\Furude Rika\Documents\dev\VertexTeachingGame\Rendering\Models\MeshData.cs:line 23
+   at VertexTeachingGame.Rendering.Models.Mesh.GenerateMeshData() in C:\Users\Furude Rika\Documents\dev\VertexTeachingGame\Rendering\Models\Mesh.cs:line 18
+   at VertexTeachingGame.MainGame.CreateMesh() in C:\Users\Furude Rika\Documents\dev\VertexTeachingGame\MainGame.cs:line 62
+   at VertexTeachingGame.MainGame.LoadContent() in C:\Users\Furude Rika\Documents\dev\VertexTeachingGame\MainGame.cs:line 36
+   at VertexTeachingGame.MainGame.Initialize() in C:\Users\Furude Rika\Documents\dev\VertexTeachingGame\MainGame.cs:line 28
+   at Microsoft.Xna.Framework.Game.DoInitialize()
+   at Microsoft.Xna.Framework.Game.Run(GameRunBehavior runBehavior)
+   at VertexTeachingGame.Program.Main() in C:\Users\Furude Rika\Documents\dev\VertexTeachingGame\Program.cs:line 14
