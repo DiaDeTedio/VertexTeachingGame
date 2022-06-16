@@ -14,7 +14,7 @@ public class MeshData
         if (VertexBuffer is null || VertexBuffer.VertexCount != vertexCount)
             VertexBuffer = new VertexBuffer(_graphicsDevice, VertexPosition.VertexDeclaration, vertexCount, BufferUsage.WriteOnly);
         if (IndexBuffer is null || IndexBuffer.IndexCount != indexCount)
-            IndexBuffer = new IndexBuffer(_graphicsDevice, IndexElementSize.SixteenBits, indexCount, BufferUsage.WriteOnly);
+            IndexBuffer = new IndexBuffer(_graphicsDevice, IndexElementSize.ThirtyTwoBits, indexCount, BufferUsage.WriteOnly);
     }
 
     public void Update(VertexPosition[] vertices, int[] indices)
