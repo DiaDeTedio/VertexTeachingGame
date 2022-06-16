@@ -10,18 +10,18 @@ namespace VertexTeachingGame.Rendering.Models;
 public class Mesh
 {
     public VertexPosition[] Vertices;
-    public Triangle[] Triangles;
+    public int[] Indices;
     public MeshData Data { get; }
 
     public void GenerateMeshData()
     {
-        Data.Update(Vertices, Triangles);
+        Data.Update(Vertices, Indices);
     }
 
-    public Mesh(GraphicsDevice graphicsDevice, VertexPosition[] vertices, Triangle[] triangles)
+    public Mesh(GraphicsDevice graphicsDevice, VertexPosition[] vertices, int[] indices)
     {
         Vertices = vertices;
-        Triangles = triangles;
+        Indices = indices;
         Data = new MeshData(graphicsDevice);
     }
 }

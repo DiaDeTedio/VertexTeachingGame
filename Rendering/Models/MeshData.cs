@@ -17,11 +17,11 @@ public class MeshData
             IndexBuffer = new IndexBuffer(_graphicsDevice, IndexElementSize.SixteenBits, indexCount, BufferUsage.WriteOnly);
     }
 
-    public void Update(VertexPosition[] vertices, Triangle[] triangles)
+    public void Update(VertexPosition[] vertices, int[] indices)
     {
-        CreateIfNeeded(vertices.Length, triangles.Length);
+        CreateIfNeeded(vertices.Length, indices.Length);
         VertexBuffer.SetData(vertices);
-        IndexBuffer.SetData(triangles);
+        IndexBuffer.SetData(indices);
     }
 
     public MeshData(GraphicsDevice graphicsDevice)
