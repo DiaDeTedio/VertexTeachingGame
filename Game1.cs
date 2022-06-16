@@ -1,24 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using VertexTeachingGame.Rendering.Models;
-using VertexTeachingGame.Rendering.Services;
 
 namespace VertexTeachingGame
 {
-    public class MainGame : Game
+    public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private MeshRenderer _renderer;
 
-        public MainGame()
+        public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-
-            _renderer = new MeshRenderer(_graphics);
         }
 
         protected override void Initialize()
@@ -28,12 +23,11 @@ namespace VertexTeachingGame
             base.Initialize();
         }
 
-        Mesh mesh;
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            CreateMesh();
+            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
@@ -46,29 +40,11 @@ namespace VertexTeachingGame
             base.Update(gameTime);
         }
 
-        void CreateMesh()
-        {
-            mesh = new Mesh(_graphics.GraphicsDevice, new[]
-                {
-                    new VertexPositionColor(new Vector3(-1, -1, 0), Color.White),
-                    new VertexPositionColor(new Vector3(1, -1, 0), Color.White),
-                    new VertexPositionColor(new Vector3(0, 1, 0), Color.White),
-                },
-                new[]
-                {
-                    new Triangle(0, 1, 2),
-                }
-            );
-            mesh.GenerateMeshData();
-        }
-
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
-            _renderer.DrawMesh(mesh);
 
             base.Draw(gameTime);
         }
