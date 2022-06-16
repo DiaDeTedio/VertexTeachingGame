@@ -19,7 +19,7 @@ public class MeshData
 
     public void Update(VertexPosition[] vertices, Triangle[] triangles)
     {
-        CreateIfNeeded(vertices.Length, triangles.Length);
+        CreateIfNeeded(vertices.Length, triangles.Length * 3);
         VertexBuffer.SetData(vertices);
         IndexBuffer.SetData(triangles);
     }
