@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace VertexTeachingGame
 {
@@ -7,8 +8,15 @@ namespace VertexTeachingGame
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            try
+            {
+                using var game = new MainGame();
                 game.Run();
+            }
+            catch (Exception ex)
+            {
+                File.WriteAllText($"dump_{DateTime.Now.ToOADate()}.txt", ex.ToString());
+            }
         }
     }
 }
