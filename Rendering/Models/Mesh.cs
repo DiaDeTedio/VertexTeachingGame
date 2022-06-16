@@ -9,7 +9,7 @@ namespace VertexTeachingGame.Rendering.Models;
 
 public class Mesh
 {
-    public VertexPosition[] Vertices;
+    public VertexPositionColor[] Vertices;
     public Triangle[] Triangles;
     public MeshData Data { get; }
 
@@ -18,7 +18,7 @@ public class Mesh
         Data.Update(Vertices, Triangles);
     }
 
-    public Mesh(GraphicsDevice graphicsDevice, VertexPosition[] vertices, Triangle[] triangles)
+    public Mesh(GraphicsDevice graphicsDevice, VertexPositionColor[] vertices, Triangle[] triangles)
     {
         Vertices = vertices;
         Triangles = triangles;
